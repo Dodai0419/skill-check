@@ -1,0 +1,726 @@
+{
+  "skills": [
+    {
+      "path": "tests/fixtures/bad-yaml",
+      "name": "bad-yaml",
+      "counts": {
+        "error": 1,
+        "warn": 1,
+        "note": 0
+      },
+      "passed": [
+        "FM2",
+        "FM3",
+        "FM4",
+        "FM5",
+        "DS1",
+        "DS2",
+        "DS4",
+        "ST1",
+        "ST2",
+        "ST4",
+        "ST5",
+        "ST6",
+        "ST7",
+        "CT3",
+        "CT9",
+        "WF1",
+        "SC5",
+        "NM2",
+        "NM4",
+        "HK1"
+      ],
+      "findings": [
+        {
+          "level": "ERROR",
+          "rule": "FM1",
+          "file": "SKILL.md",
+          "lines": [
+            3
+          ],
+          "message": "'description' has an unquoted ': ' (or ends with ':'), which YAML reads as a new key, so the frontmatter will not parse. Wrap the value in double quotes."
+        },
+        {
+          "level": "WARN",
+          "rule": "DS3",
+          "file": "SKILL.md",
+          "lines": [
+            3
+          ],
+          "message": "description says what the skill does but not when to use it. Add a \"Use when ...\" clause with the words people actually type."
+        }
+      ]
+    },
+    {
+      "path": "tests/fixtures/bom",
+      "name": "bom",
+      "counts": {
+        "error": 0,
+        "warn": 2,
+        "note": 0
+      },
+      "passed": [
+        "FM2",
+        "FM3",
+        "FM4",
+        "FM5",
+        "DS1",
+        "DS2",
+        "DS4",
+        "ST1",
+        "ST2",
+        "ST4",
+        "ST5",
+        "ST6",
+        "ST7",
+        "CT3",
+        "CT9",
+        "WF1",
+        "SC5",
+        "NM2",
+        "NM4",
+        "HK1"
+      ],
+      "findings": [
+        {
+          "level": "WARN",
+          "rule": "FM1",
+          "file": "SKILL.md",
+          "lines": [
+            1
+          ],
+          "message": "SKILL.md starts with a byte-order mark. Some loaders then miss the frontmatter. Save the file as UTF-8 without a BOM."
+        },
+        {
+          "level": "WARN",
+          "rule": "DS3",
+          "file": "SKILL.md",
+          "lines": [
+            3
+          ],
+          "message": "description says what the skill does but not when to use it. Add a \"Use when ...\" clause with the words people actually type."
+        }
+      ]
+    },
+    {
+      "path": "tests/fixtures/crlf",
+      "name": "crlf",
+      "counts": {
+        "error": 0,
+        "warn": 1,
+        "note": 0
+      },
+      "passed": [
+        "FM1",
+        "FM2",
+        "FM3",
+        "FM4",
+        "FM5",
+        "DS1",
+        "DS2",
+        "DS4",
+        "ST1",
+        "ST2",
+        "ST4",
+        "ST5",
+        "ST6",
+        "ST7",
+        "CT3",
+        "CT9",
+        "WF1",
+        "SC5",
+        "NM2",
+        "NM4",
+        "HK1"
+      ],
+      "findings": [
+        {
+          "level": "WARN",
+          "rule": "DS3",
+          "file": "SKILL.md",
+          "lines": [
+            3
+          ],
+          "message": "description says what the skill does but not when to use it. Add a \"Use when ...\" clause with the words people actually type."
+        }
+      ]
+    },
+    {
+      "path": "tests/fixtures/emoji-unicode",
+      "name": "emoji-unicode",
+      "counts": {
+        "error": 0,
+        "warn": 0,
+        "note": 0
+      },
+      "passed": [
+        "FM1",
+        "FM2",
+        "FM3",
+        "FM4",
+        "FM5",
+        "DS1",
+        "DS2",
+        "DS3",
+        "DS4",
+        "ST1",
+        "ST2",
+        "ST4",
+        "ST5",
+        "ST6",
+        "ST7",
+        "CT3",
+        "CT9",
+        "WF1",
+        "SC5",
+        "NM2",
+        "NM4",
+        "HK1"
+      ],
+      "findings": []
+    },
+    {
+      "path": "tests/fixtures/folded",
+      "name": "folded",
+      "counts": {
+        "error": 0,
+        "warn": 0,
+        "note": 0
+      },
+      "passed": [
+        "FM1",
+        "FM2",
+        "FM3",
+        "FM4",
+        "FM5",
+        "DS1",
+        "DS2",
+        "DS3",
+        "DS4",
+        "ST1",
+        "ST2",
+        "ST4",
+        "ST5",
+        "ST6",
+        "ST7",
+        "CT3",
+        "CT9",
+        "WF1",
+        "SC5",
+        "NM2",
+        "NM4",
+        "HK1"
+      ],
+      "findings": []
+    },
+    {
+      "path": "tests/fixtures/good-skill",
+      "name": "good-skill",
+      "counts": {
+        "error": 0,
+        "warn": 0,
+        "note": 0
+      },
+      "passed": [
+        "FM1",
+        "FM2",
+        "FM3",
+        "FM4",
+        "FM5",
+        "DS1",
+        "DS2",
+        "DS3",
+        "DS4",
+        "ST1",
+        "ST2",
+        "ST4",
+        "ST5",
+        "ST6",
+        "ST7",
+        "CT3",
+        "CT9",
+        "WF1",
+        "SC5",
+        "NM2",
+        "NM4",
+        "HK1"
+      ],
+      "findings": []
+    },
+    {
+      "path": "tests/fixtures/no-desc",
+      "name": "no-desc",
+      "counts": {
+        "error": 1,
+        "warn": 0,
+        "note": 0
+      },
+      "passed": [
+        "FM1",
+        "FM2",
+        "FM3",
+        "FM4",
+        "FM5",
+        "DS2",
+        "DS3",
+        "DS4",
+        "ST1",
+        "ST2",
+        "ST4",
+        "ST5",
+        "ST6",
+        "ST7",
+        "CT3",
+        "CT9",
+        "WF1",
+        "SC5",
+        "NM2",
+        "NM4",
+        "HK1"
+      ],
+      "findings": [
+        {
+          "level": "ERROR",
+          "rule": "DS1",
+          "file": "SKILL.md",
+          "lines": [],
+          "message": "frontmatter has no description. Claude picks skills by their description, so without one this skill cannot trigger on its own."
+        }
+      ]
+    },
+    {
+      "path": "tests/fixtures/no-frontmatter",
+      "name": null,
+      "counts": {
+        "error": 3,
+        "warn": 0,
+        "note": 0
+      },
+      "passed": [
+        "FM3",
+        "FM4",
+        "FM5",
+        "DS2",
+        "DS3",
+        "DS4",
+        "ST1",
+        "ST2",
+        "ST4",
+        "ST5",
+        "ST6",
+        "ST7",
+        "CT3",
+        "CT9",
+        "WF1",
+        "SC5",
+        "NM2",
+        "NM4",
+        "HK1"
+      ],
+      "findings": [
+        {
+          "level": "ERROR",
+          "rule": "FM1",
+          "file": "SKILL.md",
+          "lines": [
+            1
+          ],
+          "message": "frontmatter must start on line 1: Claude Code reads it only when the opening --- is the first line, so this skill has no name or description."
+        },
+        {
+          "level": "ERROR",
+          "rule": "FM2",
+          "file": "SKILL.md",
+          "lines": [],
+          "message": "frontmatter has no name. Anthropic's page requires one; claude.ai and the Skills API reject a skill without it (Claude Code falls back to the folder name)."
+        },
+        {
+          "level": "ERROR",
+          "rule": "DS1",
+          "file": "SKILL.md",
+          "lines": [],
+          "message": "frontmatter has no description. Claude picks skills by their description, so without one this skill cannot trigger on its own."
+        }
+      ]
+    },
+    {
+      "path": "tests/fixtures/no-license",
+      "name": "no-license",
+      "counts": {
+        "error": 0,
+        "warn": 0,
+        "note": 0
+      },
+      "passed": [
+        "FM1",
+        "FM2",
+        "FM3",
+        "FM4",
+        "FM5",
+        "DS1",
+        "DS2",
+        "DS3",
+        "DS4",
+        "ST1",
+        "ST2",
+        "ST4",
+        "ST5",
+        "ST6",
+        "ST7",
+        "CT3",
+        "CT9",
+        "WF1",
+        "SC5",
+        "NM2",
+        "NM4",
+        "HK1"
+      ],
+      "findings": []
+    },
+    {
+      "path": "tests/fixtures/quoted",
+      "name": "quoted",
+      "counts": {
+        "error": 0,
+        "warn": 1,
+        "note": 0
+      },
+      "passed": [
+        "FM1",
+        "FM2",
+        "FM3",
+        "FM4",
+        "FM5",
+        "DS1",
+        "DS2",
+        "DS4",
+        "ST1",
+        "ST2",
+        "ST4",
+        "ST5",
+        "ST6",
+        "ST7",
+        "CT3",
+        "CT9",
+        "WF1",
+        "SC5",
+        "NM2",
+        "NM4",
+        "HK1"
+      ],
+      "findings": [
+        {
+          "level": "WARN",
+          "rule": "DS3",
+          "file": "SKILL.md",
+          "lines": [
+            3
+          ],
+          "message": "description says what the skill does but not when to use it. Add a \"Use when ...\" clause with the words people actually type."
+        }
+      ]
+    },
+    {
+      "path": "tests/fixtures/risky",
+      "name": "risky",
+      "counts": {
+        "error": 0,
+        "warn": 0,
+        "note": 0
+      },
+      "passed": [
+        "FM1",
+        "FM2",
+        "FM3",
+        "FM4",
+        "FM5",
+        "DS1",
+        "DS2",
+        "DS3",
+        "DS4",
+        "ST1",
+        "ST2",
+        "ST4",
+        "ST5",
+        "ST6",
+        "ST7",
+        "CT3",
+        "CT9",
+        "WF1",
+        "SC5",
+        "NM2",
+        "NM4",
+        "HK1"
+      ],
+      "findings": []
+    },
+    {
+      "path": "tests/fixtures/stub",
+      "name": "stub",
+      "counts": {
+        "error": 0,
+        "warn": 1,
+        "note": 0
+      },
+      "passed": [
+        "FM1",
+        "FM2",
+        "FM3",
+        "FM4",
+        "FM5",
+        "DS1",
+        "DS2",
+        "DS4",
+        "ST1",
+        "ST2",
+        "ST4",
+        "ST5",
+        "ST6",
+        "ST7",
+        "CT3",
+        "CT9",
+        "WF1",
+        "SC5",
+        "NM2",
+        "NM4",
+        "HK1"
+      ],
+      "findings": [
+        {
+          "level": "WARN",
+          "rule": "DS3",
+          "file": "SKILL.md",
+          "lines": [
+            3
+          ],
+          "message": "description says what the skill does but not when to use it. Add a \"Use when ...\" clause with the words people actually type."
+        }
+      ]
+    },
+    {
+      "path": "tests/fixtures/terse",
+      "name": "terse",
+      "counts": {
+        "error": 0,
+        "warn": 2,
+        "note": 0
+      },
+      "passed": [
+        "FM1",
+        "FM2",
+        "FM3",
+        "FM4",
+        "FM5",
+        "DS1",
+        "DS2",
+        "DS4",
+        "ST1",
+        "ST2",
+        "ST4",
+        "ST5",
+        "ST6",
+        "ST7",
+        "CT3",
+        "CT9",
+        "WF1",
+        "SC5",
+        "NM2",
+        "NM4",
+        "HK1"
+      ],
+      "findings": [
+        {
+          "level": "WARN",
+          "rule": "DS3",
+          "file": "SKILL.md",
+          "lines": [
+            3
+          ],
+          "message": "description is only 11 characters, which is usually too vague to pick from many skills. Say what it does and when to use it, with specific key words."
+        },
+        {
+          "level": "WARN",
+          "rule": "DS3",
+          "file": "SKILL.md",
+          "lines": [
+            3
+          ],
+          "message": "description says what the skill does but not when to use it. Add a \"Use when ...\" clause with the words people actually type."
+        }
+      ]
+    },
+    {
+      "path": "tests/fixtures/too-long",
+      "name": "too-long",
+      "counts": {
+        "error": 1,
+        "warn": 1,
+        "note": 0
+      },
+      "passed": [
+        "FM1",
+        "FM2",
+        "FM3",
+        "FM4",
+        "FM5",
+        "DS2",
+        "DS4",
+        "ST1",
+        "ST2",
+        "ST4",
+        "ST5",
+        "ST6",
+        "ST7",
+        "CT3",
+        "CT9",
+        "WF1",
+        "SC5",
+        "NM2",
+        "NM4",
+        "HK1"
+      ],
+      "findings": [
+        {
+          "level": "ERROR",
+          "rule": "DS1",
+          "file": "SKILL.md",
+          "lines": [
+            3
+          ],
+          "message": "description is 1149 characters; the limit is 1024."
+        },
+        {
+          "level": "WARN",
+          "rule": "DS3",
+          "file": "SKILL.md",
+          "lines": [
+            3
+          ],
+          "message": "description says what the skill does but not when to use it. Add a \"Use when ...\" clause with the words people actually type."
+        }
+      ]
+    },
+    {
+      "path": "tests/fixtures/with-refs",
+      "name": "with-refs",
+      "counts": {
+        "error": 0,
+        "warn": 2,
+        "note": 1
+      },
+      "passed": [
+        "FM1",
+        "FM2",
+        "FM3",
+        "FM4",
+        "FM5",
+        "DS1",
+        "DS2",
+        "DS3",
+        "DS4",
+        "ST1",
+        "ST2",
+        "ST4",
+        "ST5",
+        "ST7",
+        "CT3",
+        "CT9",
+        "WF1",
+        "NM2",
+        "NM4",
+        "HK1"
+      ],
+      "findings": [
+        {
+          "level": "WARN",
+          "rule": "ST6",
+          "file": "reference/orphan.md",
+          "lines": [],
+          "message": "reference/orphan.md is never linked from SKILL.md, so Claude has no reason to open it. Link it from SKILL.md with a line on when to read it, or delete it."
+        },
+        {
+          "level": "WARN",
+          "rule": "SC5",
+          "file": "scripts/fill.py",
+          "lines": [
+            2
+          ],
+          "message": "scripts/fill.py needs the package 'pypdf' but no install line was found anywhere in the skill. Add 'pip install pypdf' next to the script or code that needs it."
+        },
+        {
+          "level": "NOTE",
+          "rule": "SC5",
+          "file": "SKILL.md",
+          "lines": [],
+          "message": "this skill needs packages outside the standard library (pypdf). Claude Code and claude.ai can install them; the Claude API has no network access and no runtime installs, so there they must already be available."
+        }
+      ]
+    },
+    {
+      "path": "tests/fixtures/Wrong_Dir",
+      "name": "Pretty Name",
+      "counts": {
+        "error": 1,
+        "warn": 2,
+        "note": 0
+      },
+      "passed": [
+        "FM1",
+        "FM3",
+        "FM4",
+        "FM5",
+        "DS1",
+        "DS2",
+        "DS4",
+        "ST1",
+        "ST2",
+        "ST4",
+        "ST5",
+        "ST6",
+        "ST7",
+        "CT3",
+        "CT9",
+        "WF1",
+        "SC5",
+        "NM2",
+        "NM4",
+        "HK1"
+      ],
+      "findings": [
+        {
+          "level": "ERROR",
+          "rule": "FM2",
+          "file": "SKILL.md",
+          "lines": [
+            2
+          ],
+          "message": "name 'Pretty Name' may use only lowercase letters, numbers and hyphens."
+        },
+        {
+          "level": "WARN",
+          "rule": "FM2",
+          "file": "SKILL.md",
+          "lines": [
+            2
+          ],
+          "message": "name 'Pretty Name' differs from the folder name 'Wrong_Dir'. Keep them the same so the folder, the slash command and the name all match."
+        },
+        {
+          "level": "WARN",
+          "rule": "DS3",
+          "file": "SKILL.md",
+          "lines": [
+            3
+          ],
+          "message": "description says what the skill does but not when to use it. Add a \"Use when ...\" clause with the words people actually type."
+        }
+      ]
+    }
+  ],
+  "totals": {
+    "skills": 16,
+    "error": 7,
+    "warn": 13,
+    "note": 1
+  }
+}

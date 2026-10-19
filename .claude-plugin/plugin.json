@@ -1,0 +1,1 @@
+{"name":"skill-check","description":"Lint Agent Skills against Anthropic's authoring rules and the SkillMD registry rules in one pass, no deps.","version":"0.1.0","author":{"name":"Dodai0419"}}

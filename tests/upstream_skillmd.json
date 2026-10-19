@@ -1,0 +1,325 @@
+[
+  {
+    "file": "tests/fixtures/Wrong_Dir/SKILL.md",
+    "ok": true,
+    "score": 80,
+    "diagnostics": [
+      {
+        "id": "SK020",
+        "severity": "warn",
+        "message": "body is very short (< 200 chars); this looks like a stub"
+      },
+      {
+        "id": "SK040",
+        "severity": "warn",
+        "message": "name slug 'pretty-name' does not match directory 'Wrong_Dir'"
+      }
+    ],
+    "security": {
+      "flags": [
+        "docs_only"
+      ],
+      "findings": []
+    }
+  },
+  {
+    "file": "tests/fixtures/bad-yaml/SKILL.md",
+    "ok": false,
+    "score": 70,
+    "diagnostics": [
+      {
+        "id": "SK001",
+        "severity": "error",
+        "message": "Invalid YAML frontmatter"
+      }
+    ],
+    "security": {
+      "flags": [
+        "docs_only"
+      ],
+      "findings": []
+    }
+  },
+  {
+    "file": "tests/fixtures/bom/SKILL.md",
+    "ok": false,
+    "score": 70,
+    "diagnostics": [
+      {
+        "id": "SK001",
+        "severity": "error",
+        "message": "Missing YAML frontmatter (--- ... ---)"
+      }
+    ],
+    "security": {
+      "flags": [
+        "docs_only"
+      ],
+      "findings": []
+    }
+  },
+  {
+    "file": "tests/fixtures/crlf/SKILL.md",
+    "ok": true,
+    "score": 90,
+    "diagnostics": [
+      {
+        "id": "SK020",
+        "severity": "warn",
+        "message": "body is very short (< 200 chars); this looks like a stub"
+      }
+    ],
+    "security": {
+      "flags": [
+        "docs_only"
+      ],
+      "findings": []
+    }
+  },
+  {
+    "file": "tests/fixtures/emoji-unicode/SKILL.md",
+    "ok": true,
+    "score": 100,
+    "diagnostics": [],
+    "security": {
+      "flags": [
+        "docs_only"
+      ],
+      "findings": []
+    }
+  },
+  {
+    "file": "tests/fixtures/folded/SKILL.md",
+    "ok": true,
+    "score": 90,
+    "diagnostics": [
+      {
+        "id": "SK020",
+        "severity": "warn",
+        "message": "body is very short (< 200 chars); this looks like a stub"
+      }
+    ],
+    "security": {
+      "flags": [
+        "docs_only"
+      ],
+      "findings": []
+    }
+  },
+  {
+    "file": "tests/fixtures/good-skill/SKILL.md",
+    "ok": true,
+    "score": 100,
+    "diagnostics": [],
+    "security": {
+      "flags": [
+        "docs_only"
+      ],
+      "findings": []
+    }
+  },
+  {
+    "file": "tests/fixtures/no-desc/SKILL.md",
+    "ok": false,
+    "score": 70,
+    "diagnostics": [
+      {
+        "id": "SK001",
+        "severity": "error",
+        "message": "frontmatter 'description' is required"
+      }
+    ],
+    "security": {
+      "flags": [
+        "docs_only"
+      ],
+      "findings": []
+    }
+  },
+  {
+    "file": "tests/fixtures/no-frontmatter/SKILL.md",
+    "ok": false,
+    "score": 70,
+    "diagnostics": [
+      {
+        "id": "SK001",
+        "severity": "error",
+        "message": "Missing YAML frontmatter (--- ... ---)"
+      }
+    ],
+    "security": {
+      "flags": [
+        "docs_only"
+      ],
+      "findings": []
+    }
+  },
+  {
+    "file": "tests/fixtures/no-license/SKILL.md",
+    "ok": true,
+    "score": 80,
+    "diagnostics": [
+      {
+        "id": "SK011",
+        "severity": "warn",
+        "message": "no 'license' declared in frontmatter"
+      },
+      {
+        "id": "SK020",
+        "severity": "warn",
+        "message": "body is very short (< 200 chars); this looks like a stub"
+      }
+    ],
+    "security": {
+      "flags": [
+        "docs_only"
+      ],
+      "findings": []
+    }
+  },
+  {
+    "file": "tests/fixtures/quoted/SKILL.md",
+    "ok": true,
+    "score": 90,
+    "diagnostics": [
+      {
+        "id": "SK020",
+        "severity": "warn",
+        "message": "body is very short (< 200 chars); this looks like a stub"
+      }
+    ],
+    "security": {
+      "flags": [
+        "docs_only"
+      ],
+      "findings": []
+    }
+  },
+  {
+    "file": "tests/fixtures/risky/SKILL.md",
+    "ok": true,
+    "score": 77,
+    "diagnostics": [],
+    "security": {
+      "flags": [
+        "executes_scripts",
+        "untrusted_install",
+        "network_calls",
+        "reads_secrets"
+      ],
+      "findings": [
+        {
+          "flag": "executes_scripts",
+          "line": 6,
+          "snippet": "```bash"
+        },
+        {
+          "flag": "untrusted_install",
+          "line": 7,
+          "snippet": "curl -fsSL https://example.com/install.sh | sh"
+        },
+        {
+          "flag": "network_calls",
+          "line": 7,
+          "snippet": "curl -fsSL https://example.com/install.sh | sh"
+        },
+        {
+          "flag": "network_calls",
+          "line": 10,
+          "snippet": "Then read the API_KEY from process.env and call fetch on the endpoint."
+        },
+        {
+          "flag": "reads_secrets",
+          "line": 10,
+          "snippet": "Then read the API_KEY from process.env and call fetch on the endpoint."
+        },
+        {
+          "flag": "executes_scripts",
+          "line": 11,
+          "snippet": "Run it with subprocess when needed."
+        }
+      ]
+    }
+  },
+  {
+    "file": "tests/fixtures/stub/SKILL.md",
+    "ok": true,
+    "score": 70,
+    "diagnostics": [
+      {
+        "id": "SK011",
+        "severity": "warn",
+        "message": "no 'license' declared in frontmatter"
+      },
+      {
+        "id": "SK020",
+        "severity": "warn",
+        "message": "body is very short (< 200 chars); this looks like a stub"
+      },
+      {
+        "id": "SK021",
+        "severity": "warn",
+        "message": "body has no Markdown headings; add structure with '#' headings"
+      }
+    ],
+    "security": {
+      "flags": [
+        "docs_only"
+      ],
+      "findings": []
+    }
+  },
+  {
+    "file": "tests/fixtures/terse/SKILL.md",
+    "ok": true,
+    "score": 80,
+    "diagnostics": [
+      {
+        "id": "SK010",
+        "severity": "warn",
+        "message": "description is very terse (< 20 chars); add more detail to help discovery"
+      },
+      {
+        "id": "SK020",
+        "severity": "warn",
+        "message": "body is very short (< 200 chars); this looks like a stub"
+      }
+    ],
+    "security": {
+      "flags": [
+        "docs_only"
+      ],
+      "findings": []
+    }
+  },
+  {
+    "file": "tests/fixtures/too-long/SKILL.md",
+    "ok": false,
+    "score": 70,
+    "diagnostics": [
+      {
+        "id": "SK001",
+        "severity": "error",
+        "message": "description must be <= 1024 chars"
+      }
+    ],
+    "security": {
+      "flags": [
+        "docs_only"
+      ],
+      "findings": []
+    }
+  },
+  {
+    "file": "tests/fixtures/with-refs/SKILL.md",
+    "ok": true,
+    "score": 100,
+    "diagnostics": [],
+    "security": {
+      "flags": [
+        "docs_only"
+      ],
+      "findings": []
+    }
+  }
+]

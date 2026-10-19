@@ -1,0 +1,1 @@
+{"name":"skill-check","owner":{"name":"Dodai0419"},"plugins":[{"name":"skill-check","source":"./","description":"Lint Agent Skills against Anthropic's authoring rules and the SkillMD registry rules in one pass, no deps."}]}
